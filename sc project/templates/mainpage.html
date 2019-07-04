@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Main Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body{
+  	background-image: url(static/images/bg2.jpg); 
+  }
+  .button {
+    background-color: #343887;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+   <div id="logout" align="right">
+    <form action ="{{url_for('loggingout')}}" method= 'POST'>
+        <input type="submit" value="LogOut" class="button">
+      </form>
+  </div>
+	<header style="text-align: center;"><h1><bold>Click on what you want to know</bold></h1></header>
+  <div class="row">
+  <!-- <div class="col-md-4" align="right">
+    <form action ="{{url_for('loggingout')}}" method= 'POST'>
+        <input type="submit" value="LogOut" class="button">
+      </form> -->
+  <!-- </div> -->
+  <div class="col-md-4">
+	<div id=button1 align="center" style="padding-bottom: 20px;">
+		<a href='{{url_for('tenthInfo') }}' class="button">10th to Inter</a>
+	</div>
+	<div id=button2 align="center" style="padding-bottom: 20px;">
+		<a href='{{url_for('interInfo') }}' class="button">Inter to Graduation</a>
+
+	</div>
+	<div id=button3 align="center" style="padding-bottom: 20px;">
+		<a href='{{url_for('gradInfo') }}' class="button">After Graduation</a>
+
+	</div>
+</div>
+<div class="col-md-4" align="right">
+  <!-- <form action ="{{url_for('loggingout')}}" method= 'POST'>
+        <input type="submit" value="LogOut" class="button">
+      </form> -->
+</div>
+</div>
+
+</body>
+</html>

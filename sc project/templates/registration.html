@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+	<style type="text/css">
+	body
+	{
+		/*background-color: lightblue;
+	    width: 1032px;*/
+      background-image: url(static/images/bg2.jpg); 
+      
+	}
+	
+	</style>
+</head>
+<body>
+  <br><br><br>
+  <!-- <div class="register-card"> -->
+	<h1 align="center"> Registration From</h1>
+    <div class="col-md-12" style="color: red"> 
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+              
+            {% for message in messages %}
+                <strong> {{ message }} </strong>
+            {% endfor %}
+            {% endif %}
+        {% endwith %}
+      </div>
+    </div>
+  <div class="row">
+      <div class="col-md-3"> 
+      </div>
+      <div class="col-md-6">
+        <form action="/register" method = 'POST'>
+            
+              <center>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email" placeholder="email_id"></center><br><br>
+              <!-- <dd><center> Last Name:<input type="text" name="username"></center><br><br>  
+              <dd><center> Username:<input type="text" name="username"></center><br><br>    -->
+              <center>Password:&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="pass" placeholder="password"></center><br><br>
+              <center>Confirm Password:&nbsp;<input type="password" name="confipass" placeholder="confirm password"></center><br><br>  
+              <center><button type="submit" onclick="window.location.href='{{ url_for( 'registration') }}';">Create Account</button></center><br>
+            
+          </form> 
+        </div> 
+        <div class="col-md-3"></div>
+  </div>
+</body>
+</html>

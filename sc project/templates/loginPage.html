@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+   <style type="text/css">
+   body
+   {
+    /*background-color: lightblue;
+    width: 1032px;*/
+    background-image: url(static/images/bg2.jpg); 
+  }
+  </style>
+</head>
+
+<body>
+  <h1 align="center"> Please Login For More Details</h1>
+  <br><br><br>
+  <div class="login-card">
+    <div class="row" style="color: red"> 
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+              
+            {% for message in messages %}
+                <strong> {{ message }} </strong>
+            {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+  
+  <div class="col-md-2"> 
+  </div>
+  <div class="col-md-8">
+    <form action="/login" method = 'POST'>
+    
+        <center> Email:    <input type="email" name="email" placeholder="email_id"></center><br><br>     
+        <center> Password: <input type="password" name="pass" placeholder="password"></center><br><br>
+        <center><input type="submit" value="submit"></center><br>
+      
+    </form>  
+    <!-- <font size="20px"><a href="registration.html" class="button"> <p style="text-align:center">Click here to Register</a> -->
+    </div>
+
+  </div>
+
+  <div class="col-md-2">
+  </div>
+</body>
+</html>

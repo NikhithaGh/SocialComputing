@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Main Page</title>
+  <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+  <style type="text/css">
+  body{
+  	background-image: url(/static/images/image.jpg);
+
+  }
+</style>
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-1" style="color: white"></div>
+		<div class="col-md-5" style="color: black;">
+			<h1>Courses after intermediate:</h1>
+
+			<dl>
+  			<dt style="font-size: 20px;">Engineering</dt>
+  			<p></p>
+  			<dd>	-Computer Science Engineering.</dd>
+  			<dd>	-Electronics and Communication Engineering</dd>
+  			<dd>	-Electrical engineering.</dd>
+  			<dd>	-Mechanical Engineering.</dd>
+  			<dd>	-Information Technology Engineering.</dd>
+  			<dd>	-Civil Engineering.</dd>
+  			<dd>	-Chemical Engineering.</dd>
+  			<dd>	-Aeronautical Engineering.</dd>
+  			<p></p>
+
+
+  			<dt style="font-size: 20px;">Medicine </dt>
+  			<p></p>
+  			<dd>	-MBBS(Bachelor of Medicine and Bachelor of Surgery)</dd>
+  			<dd>	-BDS(Bachelor of Dental Sciences)</dd>
+  			<dd>	-BHMS(Bachelor of Homeopathic Medicine and Surgery)</dd>
+  			<dd>	-BAMS(Bachelor of Ayurvedic Medicine and Surgery)</dd>
+  			<p></p>
+
+  			<dt style="font-size: 20px;">BSc/BCA (For Science subject students). </dt>
+  			<p></p>
+  			<dd>	-BSc Nutrition and Dietetics</dd>
+  			<dd>	-BSc Zoology</dd>
+  			<dd>	-B F Sc (Bachelor in Fisheries Sciences)</dd>
+  			<dd>	-BSc Food Technology</dd>
+  			<dd>	-BSc and AH – Veterinary Science</dd>
+  			<p></p>
+
+  			<dt style="font-size: 20px;">B Com (For Commerce subject students) </dt>
+  			<p></p>
+  			<dd>	-Computer Application</dd>
+  			<dd>	-E-Commerce</dd>
+  			<dd>	-Advertising and Sales Management</dd>
+  			<p></p>
+
+			</dl>
+
+			<!-- <p style="color: #f2cc9d">However most of the people in the same region take this in a different way, as</p>
+
+				<p style="color: #f2cc9d">MPC - For clever and techies.</p>
+
+				<p style="color: #f2cc9d">BiPC - For rich.</p>
+
+				<p style="color: #f2cc9d">MBiPC - For Outstanding students.</p>
+
+				<p style="color: #f2cc9d">MEC - For the students who wants to study C.A</p>
+
+
+				<p style="color: #f2cc9d">CEC and HEC:- For those who passed 10th in a harder way.</p> -->
+		</div>
+		<div class="col-md-5">
+			<h1 style="color: black;">Questions</h1>
+      {% for q in query %}
+      <h3>{{q.title}}</h3>
+      <h4>{{q.message}}</h4>
+      <form>
+      Answer Here
+            <input type="textarea" name="answer"><br>
+            <input type="submit" name="submit" value="submit">
+          </form>
+      {% endfor %}
+			<h4 style="color: black;"><bold>What should i do after completion of intermediate with MPC stream</bold></h4>
+			<p style="color: #3b7c36;">10 + 2 with Math background could be interdisciplinary or trans-disciplinary approach at higher level after graduation and postgraduation either in math or physics or chemistry depends on your suitability and result based performances.</p><br>
+			<h4 style="color: black;"><bold>What are the Career Options after 12th?</bold></h4>
+			<p style="color: #3b7c36;">Engineering is one of the sought after career by science students. Graduate course is of the four years. </p><p style="color: #3b7c36;">Following are degree courses in various branches of engineering</p>
+			<p style="color: #3b7c36;">•   B.Technology/Bachelor of Engineering in Computer Science</p>
+			<p style="color: #3b7c36;">•   B.Technology/Bachelor of Engineering in Mechanical</p>
+			<p style="color: #3b7c36;">•   B.Technology/Bachelor of Engineering in Electronics and Tele-communication</p>
+			<p style="color: #3b7c36;">•   B.Technology/Bachelor of Engineering in Electrical</p>
+			<p style="color: #3b7c36;">•   B.Technology/Bachelor of Engineering in Civil Engg.</p>
+			<p style="color: #3b7c36;" >•   B.Technology/Bachelor of Engineering in Information Technology</p>
+			<p style="color: #3b7c36;">•   B.Technology/Bachelor of Engineering in Dairy Technology</p><br><br>
+
+
+      <div id=hint align="bottom">
+        <h4>Please post your Questions here!</h4>
+          <form action="{{url_for('interInfo')}}" method = 'POST'>
+            <p>Type</p>
+            <input type="text" name="topic"><br>
+            <p>Message</p>
+            <input type="textarea" name="message"><br>
+            <input type="submit" name="submit" value="post">
+          </form>
+        </div>
+
+
+			
+		</div>
+    <div class="col-md-1">
+      <form action ="{{url_for('loggingout')}}" method= 'POST'>
+        <input type="submit" value="LogOut"></form>
+    </div>
+	</div>
+</body>
+</html>

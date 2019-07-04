@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HomePage</title>
+	<link href="static/css/bootstrap.min.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+	body{
+		background-image: url(static/images/bg2.jpg);
+	}
+	.button {
+    background-color: #343887;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	}
+</style>
+</head>
+<body>
+<header style="text-align: center;"><h1><bold>Welcome to What Next</bold></h1></header>
+<div class="row">
+	<div class="col-md-5">
+		
+	</div>
+	<div class="col-md-5">
+		<p>Welcome to What Next, The Career Guide.</p>
+		<p>Career Counselling has always been important but only recently, got the recognition it deserves. Earlier, people sought out career counselors, for a change in careers, only after they got a job and were unhappy with it. Now, people recognize that this isn’t ideal. What is noteworthy, is to consider why people change careers.</p>
+
+<p>It doesn’t take much thinking to understand that someone who does that was never convinced of what career they should take. Such a decision usually stems from school. Many students make career choices based on the most picked career among their peers. They don’t, for once, consider what they like until it’s too late.</p>
+
+<p>Picking a career usually, comes after picking a course. If a student doesn’t pick the right course, it would inadvertently affect their career choice. A recent study showed that 1 in 3 students are unhappy with the course that they picked. That is nearly half a million dissatisfied university students! Such figures only point to one clear truth - The importance of career guidance in schools.</p>
+
+<h3>And that is why What Next is there for you</h3>
+	</div>
+	<div class="col-md-2">
+		<div id=button1 align="right" style="padding-bottom: 20px;">
+		<a href='{{url_for('registration') }}' class="button" >Register</a>
+		</div>
+		<div id=button2 align="right" style="padding-bottom: 20px;">
+		<a href='{{url_for('login') }}' class="button">Login</a>
+		</div>
+	</div>
+</body>
+</html>
